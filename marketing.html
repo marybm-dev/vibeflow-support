@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vibe Flow - Audio-Reactive Music Visualizer</title>
+<meta name="description" content="Turn your music into neon art. Real-time audio-reactive visuals for iPhone and Apple TV.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #000; color: #e0e0e0; line-height: 1.6; overflow-x: hidden; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 80px 20px 60px; background: radial-gradient(ellipse at center, #1a0a2e 0%, #000 70%); }
+  .hero h1 { font-size: 52px; font-weight: 200; letter-spacing: 14px; color: #fff; margin-bottom: 8px; }
+  .hero .tagline { font-size: 18px; color: #b080ff; font-weight: 400; margin-bottom: 32px; }
+  .hero .desc { font-size: 16px; color: #999; max-width: 500px; margin: 0 auto 40px; }
+  .app-store-btn { display: inline-block; background: #fff; color: #000; text-decoration: none; padding: 14px 36px; border-radius: 30px; font-size: 17px; font-weight: 600; transition: transform 0.2s; }
+  .app-store-btn:hover { transform: scale(1.05); }
+
+  /* Sections */
+  .section { padding: 60px 20px; max-width: 800px; margin: 0 auto; }
+  .section h2 { font-size: 32px; font-weight: 300; letter-spacing: 4px; color: #fff; text-align: center; margin-bottom: 12px; }
+  .section .subtitle { text-align: center; color: #b080ff; font-size: 15px; margin-bottom: 40px; }
+
+  /* Mode Grid */
+  .modes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 24px; }
+  .mode-card { background: linear-gradient(135deg, #1a0a2e, #0a0a1a); border: 1px solid #2a1a4a; border-radius: 16px; padding: 24px; text-align: center; }
+  .mode-card h3 { color: #fff; font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .mode-card p { color: #888; font-size: 13px; }
+  .mode-card .icon { font-size: 28px; margin-bottom: 12px; }
+
+  /* Features */
+  .features { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+  .feature { display: flex; align-items: flex-start; gap: 16px; }
+  .feature .dot { width: 8px; height: 8px; border-radius: 50%; background: #b080ff; margin-top: 8px; flex-shrink: 0; }
+  .feature h3 { color: #fff; font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+  .feature p { color: #888; font-size: 13px; }
+
+  /* Premium */
+  .premium { background: linear-gradient(180deg, #0a0a1a 0%, #1a0a2e 50%, #0a0a1a 100%); padding: 60px 20px; text-align: center; }
+  .premium h2 { font-size: 32px; font-weight: 300; letter-spacing: 4px; color: #fff; margin-bottom: 8px; }
+  .premium .price { font-size: 40px; font-weight: 200; color: #b080ff; margin: 20px 0; }
+  .premium .price-note { color: #666; font-size: 14px; margin-bottom: 30px; }
+  .premium-features { max-width: 500px; margin: 0 auto; text-align: left; }
+  .premium-features li { color: #ccc; font-size: 15px; padding: 6px 0; list-style: none; }
+  .premium-features li::before { content: "+"; color: #b080ff; font-weight: 700; margin-right: 12px; }
+
+  /* AirPlay */
+  .airplay { text-align: center; padding: 60px 20px; }
+  .airplay h2 { font-size: 28px; font-weight: 300; letter-spacing: 4px; color: #fff; margin-bottom: 12px; }
+  .airplay p { color: #888; font-size: 15px; max-width: 500px; margin: 0 auto; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 40px 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #666; text-decoration: none; font-size: 13px; margin: 0 12px; }
+  .footer a:hover { color: #b080ff; }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 36px; letter-spacing: 8px; }
+    .features { grid-template-columns: 1fr; }
+    .modes-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>VIBE FLOW</h1>
+  <p class="tagline">Audio-Reactive Music Visualizer</p>
+  <p class="desc">Turn your music into living neon art. Ten visual modes react to every beat, note, and rhythm in real time. Mirror to Apple TV for the ultimate party display.</p>
+  <a href="https://apps.apple.com/app/vibe-flow-music-visualizer/id__APP_ID__" class="app-store-btn">Download on the App Store</a>
+</div>
+
+<div class="section">
+  <h2>10 VISUAL MODES</h2>
+  <p class="subtitle">Each one reacts uniquely to your music</p>
+  <div class="modes-grid">
+    <div class="mode-card">
+      <div class="icon">~</div>
+      <h3>Plasma</h3>
+      <p>Organic neon blobs that warp and flow with bass</p>
+    </div>
+    <div class="mode-card">
+      <div class="icon">f(x)</div>
+      <h3>Random Art</h3>
+      <p>Generative trig expressions, unique every time</p>
+    </div>
+    <div class="mode-card">
+      <div class="icon">*</div>
+      <h3>Particles</h3>
+      <p>Thousands of points flowing along noise fields</p>
+    </div>
+    <div class="mode-card">
+      <div class="icon">&lt;&gt;</div>
+      <h3>Geometric</h3>
+      <p>Tessellated polygons with audio-reactive rotation</p>
+    </div>
+    <div class="mode-card">
+      <div class="icon">@</div>
+      <h3>Nebula</h3>
+      <p>Deep space clouds with twinkling stars</p>
+    </div>
+    <div class="mode-card">
+      <div class="icon">%</div>
+      <h3>Kaleidoscope</h3>
+      <p>Multi-fold polar symmetry mandalas</p>
+    </div>
+    <div class="mode-card">
+      <div class="icon">o</div>
+      <h3>Shapes</h3>
+      <p>Floating forms with orbital drift and glow</p>
+    </div>
+    <div class="mode-card">
+      <div class="icon">@</div>
+      <h3>Vortex</h3>
+      <p>Spiral tunnel wormhole with depth rings</p>
+    </div>
+    <div class="mode-card">
+      <div class="icon">~</div>
+      <h3>Ribbon</h3>
+      <p>Flowing waveform ribbons with 3D shading</p>
+    </div>
+    <div class="mode-card">
+      <div class="icon">#</div>
+      <h3>Fractal Zoom</h3>
+      <p>Infinite zoom through geometric tiles</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>HOW IT WORKS</h2>
+  <p class="subtitle">Play music. Watch it come alive.</p>
+  <div class="features">
+    <div class="feature">
+      <div class="dot"></div>
+      <div>
+        <h3>Microphone-Powered</h3>
+        <p>Picks up music from any source playing around you. Works with Spotify, Apple Music, vinyl, live instruments.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="dot"></div>
+      <div>
+        <h3>Real-Time FFT</h3>
+        <p>Splits audio into bass, mid, and treble bands. Detects beats and tracks mood for responsive visuals.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="dot"></div>
+      <div>
+        <h3>60 FPS Metal Rendering</h3>
+        <p>Built on Apple's GPU framework for buttery smooth, low-latency visuals on every frame.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="dot"></div>
+      <div>
+        <h3>AirPlay to Apple TV</h3>
+        <p>One-tap mirroring turns your TV into a full-screen art installation. Perfect for parties.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="dot"></div>
+      <div>
+        <h3>5 Color Palettes</h3>
+        <p>Neon, Candy, Toxic, Cosmos, Fire. Plus custom colors for premium users.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="dot"></div>
+      <div>
+        <h3>Record &amp; Share</h3>
+        <p>Export video clips with optional audio to share on social media.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="premium">
+  <h2>PREMIUM</h2>
+  <p class="subtitle">Unlock everything. One time. Forever.</p>
+  <div class="price">$2.99</div>
+  <p class="price-note">One-time purchase, not a subscription</p>
+  <ul class="premium-features">
+    <li>All 10 visual modes + Blend mode</li>
+    <li>All 5 palettes + custom color picker</li>
+    <li>Animation speed control</li>
+    <li>Save &amp; load presets</li>
+    <li>Auto-cycle mode switching</li>
+    <li>Shake to randomize</li>
+    <li>60-second watermark-free video export</li>
+  </ul>
+</div>
+
+<div class="airplay">
+  <h2>YOUR TV, ALIVE</h2>
+  <p>Connect to Apple TV via AirPlay and turn any room into an immersive audio-visual experience. Set auto-cycle, dim the lights, and let the music paint your walls.</p>
+</div>
+
+<div class="footer">
+  <a href="index.html">Support</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="mailto:marybaptistamartinez@gmail.com">Contact</a>
+</div>
+
+</body>
+</html>
